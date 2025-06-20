@@ -599,7 +599,8 @@ class IPTCInfo:
 
     error = None
 
-    def __init__(self, fobj, force=False, inp_charset=None, out_charset=None):
+    def __init__(self, fobj, force=False, inp_charset=None, out_charset=None, backup=False):
+        self.backup = backup
         self._data = IPTCData({
             'supplemental category': [],
             'keywords': [],
